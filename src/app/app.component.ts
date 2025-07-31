@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from "./core/components/navbar/navbar.component";
+import NavbarComponent from "./core/components/navbar/navbar.component";
 import { AddCategoryComponent } from './features/category/add-category/add-category.component';
 import { CategoryListComponent } from './features/category/category-list/category-list.component';
 

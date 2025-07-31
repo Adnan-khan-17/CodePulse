@@ -15,9 +15,6 @@ import { AddCategoryRequest } from '../models/add-category-request.model';
 })
 export class CategoryListComponent implements OnInit {
 
-  /**
-   *
-   */
   constructor(private categoryService: CategoryService) {  
 
   }
@@ -25,8 +22,7 @@ export class CategoryListComponent implements OnInit {
   categories$? : Observable<Category[]>;
 
   ngOnInit(): void {
-     this.categories$ = this.categoryService.getAllCategories()
-    
+    this.categories$ = this.categoryService.getAllCategories()
   }
   SelectedCategory(category: AddCategoryRequest){
     console.log(category);
