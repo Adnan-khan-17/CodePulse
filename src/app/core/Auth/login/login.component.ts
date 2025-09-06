@@ -29,7 +29,7 @@ export class LoginComponent {
     };
     }
 
-    onSubmit( ): void {
+    onSubmit(): void {
       
       this.authService.login(this.model)
       .subscribe({

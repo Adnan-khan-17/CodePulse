@@ -1,3 +1,4 @@
+
 export interface UpdateBlogpostrequest{
     title: string,
     shortDescription: string,
@@ -6,5 +7,6 @@ export interface UpdateBlogpostrequest{
     urlHandle: string,
     publishedDate: Date,
     author: string,
-    isVisible: boolean
+    isVisible: boolean,
+    categories: string[]
 }

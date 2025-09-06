@@ -25,7 +25,4 @@ export class BlogPostListComponent implements OnInit {
     this.blogposts$ = this.blogpostService.getAllBlogposts()
   }
 
-
-
-
 }
