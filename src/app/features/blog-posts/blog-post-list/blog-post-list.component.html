@@ -8,29 +8,26 @@
         <table class="table table-bordered mt-3">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Title</th>
                     <th>Short Description</th>
-                    <th>Content</th>
-                    <th>Featured Image Url</th>
-                    <th>Urlhandle</th>
-                    <th>Published Date </th>
-                    <th>Author </th>
-                    <th>Is Visible </th>
+                    <th>IsVisible</th>
+                    <th>Category</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let blogpost of blogposts">
-                    <td>{{blogpost.id}}</td>
+                
                     <td>{{blogpost.title}}</td>
-                    <td>{{blogpost.shortDescription}}</td>
-                    <td>{{blogpost.content}}</td>
-                    <td>{{blogpost.featuredImageUrl}}</td>
-                    <td>{{blogpost.urlHandle}}</td>
-                    <td>{{blogpost.publishedDate}}</td>
-                    <td>{{blogpost.author}}</td>
+                    <td>{{blogpost.shortDescription}}</td>                
                     <td>{{blogpost.isVisible}}</td>
-                    <td><a class="btn btn-light" [routerLink]="['/admin/blog-posts', blogpost.id]" >Edit</a></td>
+                    <td>
+                        <span *ngFor="let category of blogpost.categories">
+                            <span class="badge bg-secondary me-2">{{category.name}}</span>
+                        </span>
+                    </td>                
+                    <td>
+                        <a class="btn btn-light" [routerLink]="['/admin/blog-posts', blogpost.id]">Edit</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
